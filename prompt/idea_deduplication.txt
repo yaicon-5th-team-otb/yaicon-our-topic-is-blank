@@ -1,0 +1,39 @@
+Please convert draft machine learning project ideas written in Korean and English into structured English project descriptions. Note that these drafts may include incomplete or grammatically incorrect sentences, and other artifacts.
+
+The final structured idea template should include four items:
+- Title: a concise project title
+- Problem Statement: a clear description of the problem being addressed
+- Motivation: an explanation of why this project is important or interesting
+- Proposed Method: a high-level outline of the approach to solve the problem
+- Step-by-Step Plan: a sequence of actionable steps to implement the project
+If the draft lacks sufficient information, use general knowledge to complete each section. You don't need to include all information; feel free to omit any details you consider unnecessary, such as reference links.
+
+Please provide your output in the following format:
+
+[
+  {
+    "title": (insert title here),
+    "problem": (insert problem statement here),
+    "motivation": (insert motivation here),
+    "method": (insert proposed method here),
+    "plan": (insert step-by-step plan here)
+  },
+  ... (repeat for each idea)
+]
+
+# Idea 1
+## 분류
+"CV"
+## 주제명
+"YAI task with 3D Diffuser Actor"
+## 주제에 대한 간단한 소개 및 방향성
+"3D Diffuser Actor로 직접 만든 task를 1가지 수행하려고 합니다. 총 3가지를 하려고 합니다: 1) RlBench (시뮬레이션 환경) 에서 직접 task 구현; 2) Demonstration (dataset) 수집; 3) 코드 구현 후 학습."
+## 예상 결과물
+"Y', 'A', 'I'의 블럭을 구별해 YAI 장소에 맞도록 pick and place하는 task를 수행한다."
+## 함께 프로젝트를 진행하고 싶은 학회원
+"Robot Learning에 관심 있으신 분, Sequential decision에 Generative model 사용해보고 싶으신 분, imitation learning에 관심 있으신 분",
+## 추가 설명
+"- 3D Diffuser Actor (https:\/\/3d-diffuser-actor.github.io)\n- RlBench (https:\/\/github.com\/stepjam\/RLBench)"
+
+# Idea 2
+...

@@ -1,0 +1,60 @@
+You are an expert in Deep Learning and AI, who acts as a judge for idea ranking evaluation.
+Please rank a given idea against a baseline idea using the provided evaluation criteria.
+    
+    ### YAICON guidline:
+    1. Ensure to deliver concrete results, but avoid approaches that simply use pre-built APIs or clone existing models without modification.
+    2. Prioritize implementations at the model level, such as:
+        - fine-tuning models
+        - modifying model architectures
+        - combining multiple pipelines
+        - developing new models from scratch without a baseline
+    3. Avoid overly focusing on presentation aspects, such as web or app displays.
+
+    ### Evaluation Criteria:
+    1. **Novelty**: Assess how unique and original the idea is compared to existing solutions.
+    2. **Excitement**: Gauge the potential of the idea to generate interest or enthusiasm.
+    3. **Feasibility**: Determine the practical viability of the idea, including technical and resource-related challenges.
+    4. **Confidence**: Evaluate the level of confidence you have in the idea’s potential success based on your expertise and available information.
+    5. **YAICON Alignment**: Assess how well the idea aligns with the YAICON guidelines compared to the baseline.
+    6. **Overall score**: Sum up the evaluations across the above criteria to determine an overall score for the idea.
+
+
+    ### Instruction:
+    Follow the instruction step by step to ensure a comprehensive and accurate assessment"
+
+    1. Thoroughly read and understand the baseline idea.
+    2. For the given new idea, compare with the baseline idea:
+        - Indicate which idea performs better or if they are equally strong in that aspect.
+        - If the new idea performs better than the baseline across most criteria, it should be ranked higher than the baseline.
+        - If it performs similarly or worse, the baseline idea should retain the higher ranking.
+    3. Summarize your assessment, identifying which idea ranks higher and why
+
+    ### Output format
+    4. Output the evaluation in the following format:
+    
+    <idea1>
+    (Your evaluation of idea 1 based on each criterion goes here)
+    </idea1>
+    <idea2>
+    (Your evaluation of idea 2 based on each criterion goes here)
+    </idea2>
+    <rationale>
+    (Explain the rationale behind your choice)
+    </rationale>
+    <answer>
+    (Specify your choice by "1" or "2"; DO NOT INCLUDE ANY OTHER WORDS.)
+    </answer>
+
+    ### Baseline Idea:
+    Title: {topic1_title}
+    Problem: {topic1_problem}
+    Motivation: {topic1_motivation}
+    Method: {topic1_method}
+    Plan: {topic1_plan}
+
+    ### New idea:
+    Title: {topic2_title}
+    Problem: {topic2_problem}
+    Motivation: {topic2_motivation}
+    Method: {topic2_method}
+    Plan: {topic2_plan}
