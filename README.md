@@ -2,7 +2,7 @@
 
 
 <h1 align="center">
-  <b>YAICON, our topic is blank, 우리팀의 주제는 [ ] 입니다</b><br>
+  <b>Our topic is blank</b><br>
   <b>by YAICON 5th (이전)논문을 이븐하게 읽지 않았어요. </b><br>
 </h1>
 
