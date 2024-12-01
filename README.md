@@ -11,7 +11,7 @@
 </p>
 
 
-This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI].(<https://github.com/yonsei-YAI>) at Yonsei University. The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas. It builds upon the baseline work found in [this repository].(<https://github.com/NoviScl/AI-Researcher/tree/main>), which provides the foundation for generating novel research ideas using AI.
+This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI](<https://github.com/yonsei-YAI>) at Yonsei University. The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas. It builds upon the baseline work found in [this repository](<https://github.com/NoviScl/AI-Researcher/tree/main>), which provides the foundation for generating novel research ideas using AI.
 
 The system accepts a research domain or theme described in natural language as input and outputs a ranked list of potential project proposals. Each proposal provides a detailed research topic, enabling students to select a direction for their project with minimal additional effort.
 
