@@ -6,6 +6,10 @@
   <b>by YAICON 5th (이전)논문을 이븐하게 읽지 않았어요. </b><br>
 </h1>
 
+<p align="center">
+ <img src = "././title.png">
+</p>
+
 
 This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI].(<https://github.com/yonsei-YAI>) at Yonsei University. The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas. It builds upon the baseline work found in [this repository].(<https://github.com/NoviScl/AI-Researcher/tree/main>), which provides the foundation for generating novel research ideas using AI.
 
@@ -13,8 +17,10 @@ The system accepts a research domain or theme described in natural language as i
 
 Inspired by the same study that compared AI and human ideation abilities, this framework aims to empower YAICON participants to leverage AI in generating novel and valuable research topics in the field of artificial intelligence.
 
+<p align="center">
+ <img src = "./overview.png">
+</p>
 
-![Add files via upload](./overview.png)
 Our agent pipeline consists of the following modules:
 (1) Related Paper Retrieval;
 (2) Idea Generation;
