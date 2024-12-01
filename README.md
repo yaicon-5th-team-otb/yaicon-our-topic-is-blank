@@ -10,7 +10,7 @@
 </p>
 
 
-This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI](<https://github.com/yonsei-YAI>) at Yonsei University. The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas. 
+This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI](<https://github.com/yonsei-YAI>) at Yonsei University.:relaxed:  The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas.:computer:
 
 It builds upon the baseline work found in [this repository](<https://github.com/NoviScl/AI-Researcher/tree/main>), which provides the foundation for generating novel research ideas using AI.
 
@@ -80,7 +80,7 @@ Example usage:
 
 ```
 
-##  Idea Conceretization
+## Idea Conceretization
 
 
 Next, we expand each seed idea into a detailed idea includng problem, motiation, proposed approach, step-by-step experiment plan, expected outcomes, and fallback plan.
