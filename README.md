@@ -13,6 +13,8 @@ The system accepts a research domain or theme described in natural language as i
 
 Inspired by the same study that compared AI and human ideation abilities, this framework aims to empower YAICON participants to leverage AI in generating novel and valuable research topics in the field of artificial intelligence.
 
+
+![Add files via upload](./overview.png)
 Our agent pipeline consists of the following modules:
 (1) Related Paper Retrieval;
 (2) Idea Generation;
