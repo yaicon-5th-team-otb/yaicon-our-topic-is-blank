@@ -11,11 +11,12 @@
 </p>
 
 
-This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI](<https://github.com/yonsei-YAI>) at Yonsei University. The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas. It builds upon the baseline work found in [this repository](<https://github.com/NoviScl/AI-Researcher/tree/main>), which provides the foundation for generating novel research ideas using AI.
+This repository implements a research topic generation framework designed for YAICON, a conference organized by [YAI](<https://github.com/yonsei-YAI>) at Yonsei University. The framework was developed to help generate high-quality research topics across various AI subfields, supporting students in ideating innovative and impactful research ideas. 
+
+It builds upon the baseline work found in [this repository](<https://github.com/NoviScl/AI-Researcher/tree/main>), which provides the foundation for generating novel research ideas using AI.
 
 The system accepts a research domain or theme described in natural language as input and outputs a ranked list of potential project proposals. Each proposal provides a detailed research topic, enabling students to select a direction for their project with minimal additional effort.
 
-Inspired by the same study that compared AI and human ideation abilities, this framework aims to empower YAICON participants to leverage AI in generating novel and valuable research topics in the field of artificial intelligence.
 
 <p align="center">
  <img src = "./overview.png">
@@ -33,15 +34,17 @@ These modules are designed to be run sequentially as an end-to-end idea generati
 ## Table of Contents
 
 1. [Setup](#setup)
-2. [Related Paper Search](#related-paper-search)
-3. [Grounded Idea Generation](#grounded-idea-generation)
+2. [Related Paper Retrieval](#related-paper-search)
+3. [Idea Generation](#grounded-idea-generation)
 4. [Idea Deduplication](#idea-deduplication)
-5. [Project Proposal Generation](#project-proposal-generation)
-6. [Project Proposal Ranking](#project-proposal-ranking)
-7. [Project Proposal Filtering](#project-proposal-filtering)
-8. [End-to-End Pipeline](#end-to-end-pipeline)
-9. [Review Scores](#review-scores)
+5. [Idea Conceretization](#project-proposal-generation)
+6. [Idea Ranking](#project-proposal-ranking)
+7. [End-to-End Pipeline](#end-to-end-pipeline)
 
+
+<p align="center">
+ <img src = "./method.png">
+</p>
 
 ## Setup
 
@@ -66,7 +69,8 @@ Create `keys.json` and store it in the project directory. The file should look l
 }
 ```
 
-## Related Paper Search
+## Related Paper Retrieval;
+
 
 The related work search module will iteratively propose search queries and search through the Semantic Scholar API. We then use an LLM to score the relevance of retrieved papers for reranking. The module takes a topic description or an idea as input and returns a list of the most relevant papers as output.
 
@@ -79,7 +83,8 @@ bash scripts/lit_review.sh
 The `max_paper_bank_size` is a hyperparameter to control when to stop the paper search process (until the specified number of papers has been retrieved). The generated search queries as well as the ranked papers will be stored in the specified cache file. The cache file can be used as part of the input to the idea generation module. We used `max_paper_bank_size=120` for the experiments in our paper and used `max_paper_bank_size=50` in this demo example. Running this demo example costs $0.51. 
 
 
-## Grounded Idea Generation
+## Idea Generation;
+
 
 The idea generation module takes a topic description and optionally a list of relevant papers as input, and returns a list of generated ideas as the output. 
 
@@ -101,7 +106,8 @@ cd ai_researcher
 bash scripts/idea_dedup.sh
 ```
 
-## Project Proposal Generation
+##  Idea Conceretization
+
 
 Next, we expand each seed idea into a detailed project proposal. 
 
@@ -113,7 +119,7 @@ bash scripts/project_proposal_gen.sh
 
 Since the project proposals are long, each generation takes an average of $0.3 and running the whole demo example here takes $2.9.
 
-## Project Proposal Ranking
+## Idea Ranking
 
 We rank all the generated project proposals by using an LLM ranker. 
 
@@ -125,17 +131,6 @@ bash scripts/project_proposal_ranking.sh
 
 The output will be a json file storing the score of each project proposal, which you can use to rank the proposals. The demo example costs $0.74 to rank 10 project proposals for 5 rounds of scoring.
 
-## Project Proposal Filtering (Optional)
-
-If you wish, you can also apply the last filtering step where we check whether each project proposal is novel and feasible. For novelty check, we will retrieve the most similar papers to the generated project proposal and compare them one by one. The project proposal will be filtered as long as it's judged as the same as any of the retrieved papers by the LLM.
-
-Example usage:
-```
-cd ai_researcher
-bash scripts/project_proposal_filter.sh
-```
-
-All the project proposals that passed the filters will be stored in the specified output cache directory, along with the retrieved papers used for the novelty check. Note that this filtering step is rather expensive (it costs $1.9 to check through each project proposal in this demo example). You can lower the costs by reducing the number of retrieved papers for novelty check.
 
 ## End-to-End Pipeline
 
@@ -147,9 +142,3 @@ cd ai_researcher
 bash scripts/end_to_end.sh
 ```
 We are not releasing the full set of AI-generated project proposals since we are using them in the next phase of our study and we want to avoid any potential bias. However, you should be able to reproduce ideas with similar quality by following the steps above with an increased inference budget. 
-
-## Review Scores
-
-We release the full set of review scores collected in the `results` directory, along with all the scripts that we used to do the stistical tests in the paper. 
-All reviewer names have been anonymized to protect their information.
-We will release the free-text rationales later after phase II of our study is completed.
